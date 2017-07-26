@@ -1,0 +1,23 @@
+ {
+  "author" : "matt",
+  "title" : "project",
+  "samples": [
+      {"hihat": "/samples/hi-hat"},
+      {"kick": "/samples/kick"}
+  ],
+  "eventsList": [
+      {
+          "sample":"hihat",
+          "start":0,
+          "length":
+          "end": 2,
+      },
+      {
+          "sample":"hihat",
+          "start": ,
+          "end": 0.75
+      },
+  ]
+
+  
+}

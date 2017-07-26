@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+</head>
+
+<body style="background-color:rgba(79,38,195,0.96);">
+    <nav class="navbar navbar-default navigation-clean">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Get Jamming!</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" role="presentation"><a href="#">Username</a></li>
+                    <li role="presentation"><a href="#">Projects </a></li>
+                    <li role="presentation"><a href="#">Profile </a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Log Out <span class="caret"></span></a>
+                        <!--<ul class="dropdown-menu" role="menu">-->
+                            <!--<li role="presentation"><a href="#">Log Out</a></li>-->
+                            <!--<li role="presentation"><a href="#">Second Item</a></li>-->
+                            <!--<li role="presentation"><a href="#">Third Item</a></li>-->
+                        <!--</ul>-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form name="editForm" novalidate class="form-inline" style="background-color:rgba(79,38,195,0.96);">
+    <div class="table-responsive" style="padding:200px;background-color:rgba(79,38,195,0.96);color:rgb(255,253,253);height:300px;width:1024px;margin:auto;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Profile </th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name: </td>
+                    <td> <input type="text" ng-readonly="all" placeholder="Matthew Liou" style="background-color:white;"></td>
+                </tr>
+                <tr>
+                    <td> Email:</td>
+                    <td> <input type="text" ng-readonly="all" placeholder="merrynus@hotmail.com" style="background-color:white;"></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td> <input type="text" ng-readonly="all" placeholder="****************" style="background-color:white;"></td>
+                </tr>
+                <!--<tr>-->
+                    <!--<td>Projects: </td>-->
+                    <!--<td> </td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="padding-left:500px;color:white;">
+            Edit: <input type="checkbox" ng-model="all">
+            <!--<button class="btn btn-default" type="button" ng-model="all">Edit </button>-->
+        </div>
+    </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamathon_UploadPage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="height:1000px;">
+    <div class="contact-clean" style="background-color:#5629d5;height:650px;">
+        <form method="post" style="margin:auto;">
+            <h2 class="text-center">Upload your Project!</h2>
+            <div class="form-group has-success has-feedback">
+                <input class="form-control" type="text" name="name" placeholder="Name"><i class="form-control-feedback glyphicon glyphicon-ok"
+                    aria-hidden="true"></i></div>
+            <div class="form-group has-error"></div>
+            <div class="form-group">
+                <textarea class="form-control" rows="14" name="message" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">UPLOAD </button>
+            </div>
+        </form>
+        <form name="UploadFormS3" novalidate ng-submit="uploadCtrl.uploadS3()">
+            <h1>S3 File Upload</h1>
+
+            <img ngf-thumbnail="uploadCtrl.audFileS3" height="100"><br />
+            <div ng-show="uploadCtrl.audFileS3">
+                <span>{{uploadCtrl.audFileS3.size}} in bytes </span>
+            </div>
+
+            <div class="form-group">
+                <!-- Select file to upload. Single file only. Accepts only images-->
+                <input id="file" type="file" ng-model="uploadCtrl.audFileS3" ngf-select ngf-pattern="'audio/*'" ngf-accept="'image/*'">
+                <br><br>
+                <button type="submit" class="btn btn-success" ng-disabled="UploadFormS3.$invalid">Upload</button>
+            </div>
+            <!-- Success and error flash messages. Logic based on status code returned after POST request -->
+            <div class="alert" role="alert" alert-dismissable ng-show="uploadCtrl.statusS3.code" ng-class="{'alert-success': uploadCtrl.statusS3.code == 202, 'alert-danger': uploadCtrl.statusS3.code == 400 }">
+                <button class="close" data-dismiss="alert">
+                    <!-- data dismiss removes the element. This alert won't show up again before refreshing -->
+                    &times;
+                </button> {{ uploadCtrl.statusS3.message }}
+            </div>
+            <img ng-src="{{uploadCtrl.audioFromS3}}" alt="Description">
+        </form>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

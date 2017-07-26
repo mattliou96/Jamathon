@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Jamathon">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jamathon</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<div style="background-color:rgba(79,38,195,0.96);">
+
+    <body style="background-color:rgba(79,38,195,0.96);">
+        <ui-view></ui-view>
+    </body>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<!--Custom-->
+<script src="app/app.module.js"></script>
+<script src="app/config/app.route.js"></script>
+<script src="app/services/passport.service.js"></script>
+<script src="app/loadout/loadout.controller.js"></script>
+<script src="app/login/login.controller.js"></script>
+<script src="app/upload/upload.controller.js"></script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamathon_Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+</head>
+
+<body>
+    <div class="login-clean" style="max-width:100vw;height:1500vh;background-color:#5629d5;">
+        <form method="post" name="loginForm"  novalidate>
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-music-note" style="color:rgb(24,31,198);"></i></div>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Email" style="font-family:Abel, sans-serif;" ng-model="ctrl.user.username">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password" style="font-family:Abel, sans-serif;" ng-model="ctrl.user.password">
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" ng-click="ctrl.login()" style="background-color:rgb(24,31,198);font-family:Abel, sans-serif;">Log In</a>
+            </div><a href="#" class="forgot" style="font-family:Abel, sans-serif;">Forgot your email or password?</a></form>
+            <a href="/oauth/facebook" class="btn btn-block btn-social btn-facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook
+            </a>
+            <div ng-if="ctrl.msg" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-triangle"></i> {{ctrl.msg}}</div>
+    </div>
+    
+    <a href="/oauth/facebook" class="btn btn-block btn-social btn-facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+            </a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

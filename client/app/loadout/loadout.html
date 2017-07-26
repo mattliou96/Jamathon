@@ -1,0 +1,56 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamathon_Loadout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="background-color:#5629d5;">-->
+    <div style="background-color:rgba(79,38,195,0.96);">
+    <div>
+        <nav class="navbar navbar-default navigation-clean">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Get Jamming!</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active" role="presentation" ng-if='ctrl.user'><a>Welcome back, {{ctrl.user.username | uppercase}}!</a></li>
+                        <li role="presentation"><a href="#">Projects </a></li>
+                        <li role="presentation"><a ui-sref="profile">Profile </a></li>
+                        <li class="dropdown" ng-if="ctrl.user"><a href="/logout">Log Out</a>
+                            <!--<ul class="dropdown-menu" role="menu">-->
+                                <!--<li role="presentation"><a href="#">First Item</a></li>-->
+                                <!--<li role="presentation"><a href="#">Second Item</a></li>-->
+                                <!--<li role="presentation"><a href="#">Third Item</a></li>-->
+                            <!--</ul>-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-0" style="margin:auto;">
+                    <a class="btn btn-default" ui-sref="projects" style="padding:60px 60px;margin:80px;font-size:20px;padding-left:80px;padding-right:80px;font-family:Abel, sans-serif;">Start New Project</a>
+                </div>
+                <div class="col-md-6" style="margin:auto;">
+                    <button class="btn btn-default" type="button" style="padding:60px 60px;margin:80px;font-size:20px;padding-right:80px;padding-left:80px;font-family:Abel, sans-serif;">Jamathon Feed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>-->
