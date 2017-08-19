@@ -3,6 +3,13 @@
 const HOME_PAGE = "/#!/loadout";
 const SIGNIN_PAGE = "/#!/login";
 
+// var Mailgun = require('mailgun-js');
+
+// var api_key = 'api:key-1bcf117a1ecbe7246c753bb90ad2017b';
+// var domain = 'sandboxb3d6a888fe4949eca744ae09d4ed02de.mailgun.org';
+// var from_who = 'merrynus@hotmail.com';
+
+
 var fs = require("fs"),
     path = require("path"),
     multer = require("multer"),
@@ -47,7 +54,6 @@ var uploadS3 = multer({
     })
 })
 
-
 module.exports = function (app, passport) {
 
     // POST request handler for /upload route 
@@ -72,6 +78,20 @@ module.exports = function (app, passport) {
     app.post("/uploadS3",
         uploadS3.single("aud-file"),
         function (req, res) {
+            app.locals.db.collection('projects')
+            .insertOne({
+                description: req.body.comment,
+                project_id: req.file.location,
+                user_id: req.user,
+                projectName: req.body.projectName,
+            })
+            .then(function (result) {
+                console.log(result);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+            console.log(req.body);
             console.log("Upload to S3...");
             console.log(req.file);
             //sneds a HTTP 202 status code
@@ -85,7 +105,7 @@ module.exports = function (app, passport) {
     var User = require('./api/users.controller');
 
     // Get the whole product list (based on filter criteria)
-    app.get("/api/users/:user_id/projects", Project.retrieveAll);
+    app.get("/api/users/projects", Project.retrieveAll);
 
     // Get a single product
     app.get("/api/users/:user_id/projects/:project_id", Project.retrieveOne);

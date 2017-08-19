@@ -7,25 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jamathon</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./sequencer/sequencer.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
 </head>
-<div style="background-color:rgba(79,38,195,0.96);">
-
-    <body style="background-color:rgba(79,38,195,0.96);">
+<body style="background: linear-gradient(to bottom, #9933ff 0%, #6666ff 100%);">
         <ui-view></ui-view>
     </body>
-</div>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/angular-audio/app/angular.audio.js"></script>
 
 <!--Custom-->
 <script src="app/app.module.js"></script>
 <script src="app/config/app.route.js"></script>
 <script src="app/services/passport.service.js"></script>
+<script src="app/services/project.service.js"></script>
+<script src="app/factory/auth-factory.js"></script>
 <script src="app/loadout/loadout.controller.js"></script>
 <script src="app/login/login.controller.js"></script>
 <script src="app/upload/upload.controller.js"></script>
+<script src="app/projects/project.controller.js"></script>
+<script src="app/projects/javascripts/WavAudioEncoder.js"></script>
+<script src="app/projects/recorderjs/recorder.js"></script>
+<script src="app/register/register.controller.js"></script>
+<script src="app/userprojects/user.projects.controller.js"></script>
 
 </html>

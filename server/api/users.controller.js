@@ -1,5 +1,8 @@
 var mongo = require('mongodb');
 var config = require('../config');
+var bcrypt   = require('bcryptjs');
+
+
 
 // Retrieve all the products - GET /api/products
 var retrieveAll = function () {
@@ -59,6 +62,7 @@ var retrieveOne = function () {
         // 2. You should see the detail page showing all the record information
 
         // Enter your codes here
+        console.log(db);
         db.collection('users')
             .findOne({ _id: param })
             .then(function (result) {
@@ -87,8 +91,20 @@ var insertOne = function () {
         // 2. If you can't see the record, use the Postman to check as we have limit to 50 records
 
         // Enter your codes here
+        //var salt = bcrypt.genSaltSync(10)
+        var my_salt = '$2a$10$OYYjUvRSmxiEiQvr3vO07e'
+        var hashPassword = bcrypt.hashSync(req.body.password, my_salt, null);
+        console.log("Salt", my_salt)
+        console.log("Passwd hash", hashPassword )
+
+        // var hashPassword = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8), null);
+    
+        var newUser = {
+            email: req.body.email,
+            password: hashPassword
+        };
         db.collection('users')
-            .insertOne(JSON.parse(req.body.newUser))
+            .insertOne(newUser)
             .then(function (result) {
                 res.json(result);
             })

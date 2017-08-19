@@ -12,7 +12,7 @@
 
 <body style="height:1000px;">
     <div class="contact-clean" style="background-color:#5629d5;height:650px;">
-        <form method="post" style="margin:auto;">
+        <form method="post" style="margin:auto;" name="UploadFormS3" novalidate ng-submit="uploadCtrl.uploadS3()">
             <h2 class="text-center">Upload your Project!</h2>
             <div class="form-group has-success has-feedback">
                 <input class="form-control" type="text" name="name" placeholder="Name"><i class="form-control-feedback glyphicon glyphicon-ok"
@@ -21,21 +21,14 @@
             <div class="form-group">
                 <textarea class="form-control" rows="14" name="message" placeholder="Description"></textarea>
             </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">UPLOAD </button>
-            </div>
-        </form>
-        <form name="UploadFormS3" novalidate ng-submit="uploadCtrl.uploadS3()">
-            <h1>S3 File Upload</h1>
-
             <img ngf-thumbnail="uploadCtrl.audFileS3" height="100"><br />
             <div ng-show="uploadCtrl.audFileS3">
                 <span>{{uploadCtrl.audFileS3.size}} in bytes </span>
             </div>
 
             <div class="form-group">
-                <!-- Select file to upload. Single file only. Accepts only images-->
-                <input id="file" type="file" ng-model="uploadCtrl.audFileS3" ngf-select ngf-pattern="'audio/*'" ngf-accept="'image/*'">
+                <!-- Select file to upload. Single file only. Accepts only audio-->
+                <input id="file" type="file" ng-model="uploadCtrl.audFileS3" ngf-select ngf-pattern="'audio/*'" ngf-accept="'audio/*'">
                 <br><br>
                 <button type="submit" class="btn btn-success" ng-disabled="UploadFormS3.$invalid">Upload</button>
             </div>
@@ -46,7 +39,12 @@
                     &times;
                 </button> {{ uploadCtrl.statusS3.message }}
             </div>
-            <img ng-src="{{uploadCtrl.audioFromS3}}" alt="Description">
+            <audio src="{{uploadCtrl.audioFromS3}}"></audio>ˀ
+            <img ng-src="{{uploadCtrl.audioFromS3}}">
+            <!--<div class="form-group">
+                <button class="btn btn-primary" type="submit">UPLOAD </button>
+            </div>-->
+            
         </form>
 
     </div>

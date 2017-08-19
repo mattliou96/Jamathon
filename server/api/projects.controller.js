@@ -15,7 +15,7 @@ var retrieveAll = function () {
         // 4. Convert the records to array and send it back to client (Service: retrieveAll)
         // Validation:
         // 1. On the Search page, clicking on the "Retrieve Products" button will retrieve restaurant list
-
+        console.log(req.user);
         // Enter your codes here 
             db.collection('projects')
             .find()

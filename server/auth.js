@@ -7,7 +7,7 @@ var FacebookStrategy = require("passport-facebook").Strategy
 // var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
 // var WechatStrategy = require("passport-wechat").Strategy
 // var TwitterStrategy  = require('passport-twitter').Strategy;
-// var bcrypt = require('bcryptjs');
+var bcrypt = require('bcryptjs');
 
 // var User = require("./database").User;
 // var AuthProvider = require("./database").AuthProvider;
@@ -26,17 +26,37 @@ module.exports = function (app, passport) {
                     //res.status(500).send(err);
                     return done(null, false);
                 };
+                // Prepare password
+                // app.set('salt', "random_salt")
+                var my_salt = '$2a$10$OYYjUvRSmxiEiQvr3vO07e'
+                var hashPassword = bcrypt.hashSync(password, my_salt, null);
+                console.log("hash_pwd", hashPassword)
+
+                // bcrypt.compare(hashPassword, hash, function(err, res) {
+
+                // });
+
                 // Query Operator
-                var query = { "username": username, "password": password };
+                //"password": hashPassword
+                var query = { "email": username , "password": hashPassword};
                 console.log(query);
                 // var options = {fields: {type: 1, title: 1, description: 1, pricing: 1}}
                 var options = {};
                 // Retrieve one product
+
                 collection.findOne(query, options, function (err, result) {
                     console.log("Retrieve One: ");
+                    console.log("Error if there any ?")
+                    if (err){
+                        console.log("Error if there any ?")
+                        console.log(err)
+                    }
                     console.log(result);
-                    if (result)
+                    console.log(app.get('salt'))
+                    if (result){
+
                         return done(null, username);
+                    }
 
                     return done(null, false);
                 });
@@ -65,6 +85,7 @@ module.exports = function (app, passport) {
 
         // var options = {fields: {type: 1, title: 1, description: 1, pricing: 1}}
         // Retrieve one product
+        console.log("Username: ", username)
         Users.findOne({ "username": username })
         .then(function(user) {
             console.log("Retrieve One:");

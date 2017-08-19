@@ -26,7 +26,13 @@
             // })
             .state('projects', {
                 url: '/projects',
-                templateUrl: 'app/projects/project.html'
+                templateUrl: 'app/projects/project.sequencer.html',
+                controller: "ProjectCtrl as uploadCtrl"
+            })
+            .state('userprojects', {
+                url: '/user.projects',
+                templateUrl: 'app/userprojects/user.projects.html',
+                controller:"userProjectCtrl as ctrl"
             })
             .state('upload', {
                 url: '/upload',
@@ -35,7 +41,8 @@
             })
             .state('register', {
                 url: '/register',
-                templateUrl: 'app/register/register.html'
+                templateUrl: 'app/register/register.html',
+                controller: "RegCtrl as regCtrl"
             })
             .state("login", {
                 url: "/login",

@@ -47,6 +47,6 @@ module.exports = {
     // Wechat_Callback_Url: domain_name + "/oauth/wechat/callback"
     AWS_S3_REGION: 'ap-southeast-1',
     AWS_S3_BUCKET: 'jamathon',
-    AWS_ACCESS_KEY_ID: 'AKIAJQCL5X3ZAGMORFDA',
-    AWS_SECRET_ACCESS_KEY: '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',
+    AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+    AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY
 };

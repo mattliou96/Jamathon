@@ -12,7 +12,7 @@
 </head>
 
 <body style="background-color:#5629d5;">-->
-    <div style="background-color:rgba(79,38,195,0.96);">
+    <div class="animated fadeIn">
     <div>
         <nav class="navbar navbar-default navigation-clean">
             <div class="container">
@@ -21,15 +21,15 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active" role="presentation" ng-if='ctrl.user'><a>Welcome back, {{ctrl.user.username | uppercase}}!</a></li>
+                        <li class="active" role="presentation" ng-if='ctrl.username'><a>Welcome back, {{ctrl.username | uppercase}}!</a></li>
                         <li role="presentation"><a href="#">Projects </a></li>
                         <li role="presentation"><a ui-sref="profile">Profile </a></li>
-                        <li class="dropdown" ng-if="ctrl.user"><a href="/logout">Log Out</a>
+                        <li class="dropdown" ng-if="ctrl.username"><a href="/logout">Log Out</a>
                             <!--<ul class="dropdown-menu" role="menu">-->
                                 <!--<li role="presentation"><a href="#">First Item</a></li>-->
                                 <!--<li role="presentation"><a href="#">Second Item</a></li>-->
                                 <!--<li role="presentation"><a href="#">Third Item</a></li>-->
-                            <!--</ul>-->
+                         <!--</ul>-->
                         </li>
                     </ul>
                 </div>

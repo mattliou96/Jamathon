@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="login-clean" style="max-width:100vw;height:1500vh;background-color:#5629d5;">
+    <div class="login-clean animated fadeInRight" style="max-width:100vw;background: linear-gradient(to bottom, #9933ff 0%, #6666ff 100%);">
         <form method="post" name="loginForm"  novalidate>
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-music-note" style="color:rgb(24,31,198);"></i></div>
@@ -25,16 +25,23 @@
             </div>
             <div class="form-group">
                 <a class="btn btn-primary btn-block" ng-click="ctrl.login()" style="background-color:rgb(24,31,198);font-family:Abel, sans-serif;">Log In</a>
-            </div><a href="#" class="forgot" style="font-family:Abel, sans-serif;">Forgot your email or password?</a></form>
-            <a href="/oauth/facebook" class="btn btn-block btn-social btn-facebook">
-                <i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook
-            </a>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info">
+                    <a href="/oauth/facebook" class="btn btn-block btn-social btn-facebook" style="font-family:Abel, sans-serif;">
+                        <i class="fa fa-facebook" aria-hidden="true"></i> Login with Facebook
+                    </a>
+                </button>
+            </div>
+            <a href="#" class="forgot" style="font-family:Abel, sans-serif;">Forgot your email or password?</a>
+        </form>
+            
             <div ng-if="ctrl.msg" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-triangle"></i> {{ctrl.msg}}</div>
     </div>
     
-    <a href="/oauth/facebook" class="btn btn-block btn-social btn-facebook">
-                <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
-            </a>
+    <!--<button href="/oauth/facebook" class="btn btn-block btn-social btn-facebook">
+        <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+    </button>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

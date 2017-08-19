@@ -7,8 +7,8 @@ module.exports = function(app) {
     var MongoClient = require('mongodb').MongoClient;
     // MongoDB Connection URL
     // var url = config.MONGO_URI;
-    //var url = "mongodb://mattliou96:merrynml96@jamathon-shard-00-00-hxnza.mongodb.net:27017,jamathon-shard-00-01-hxnza.mongodb.net:27017,jamathon-shard-00-02-hxnza.mongodb.net:27017/jamathon?ssl=true&replicaSet=Jamathon-shard-0&authSource=admin";
-    var url = 'mongodb://localhost/jamathon';
+    var url = "mongodb://mattliou96:merrynml96@jamathon-shard-00-00-hxnza.mongodb.net:27017,jamathon-shard-00-01-hxnza.mongodb.net:27017,jamathon-shard-00-02-hxnza.mongodb.net:27017/jamathon?ssl=true&replicaSet=Jamathon-shard-0&authSource=admin";
+    // var url = 'mongodb://localhost/jamathon';
     // console.log("url: " + url);
     // Create the database connection
     MongoClient.connect(url, {  

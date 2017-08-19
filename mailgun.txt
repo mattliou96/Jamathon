@@ -1,0 +1,13 @@
+txt records:
+
+v=spf1 include:mailgun.org ~all
+
+k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCoam0hWlXcFnMV3fbusX2OBjgOtfS4gpiz4zS9RTgJgVEwx+ciMo55/grcKBC0mjSb0BYIhi2g9cjQfs5gw21PPnLqJPVFxt4zhxwRjXlzyB9VWUo3Tc/RHUEDAybXBPed5cx9RP2Csx3W3/FsxJRFSoksPepov7d3l7/fqrbocwIDAQAB
+
+mx:
+
+mxa.mailgun.org
+mxb.mailgun.org
+cname:
+
+mailgun.org 

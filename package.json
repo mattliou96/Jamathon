@@ -6,14 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "env": {
+    "AWS_ACCESS_KEY_ID": "AKIAJQCL5X3ZAGMORFDA",
+    "AWS_SECRET_ACCESS_KEY": "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"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "aws-sdk": "^2.90.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-session": "^1.15.4",
+    "mailgun-js": "^0.12.0",
     "mongodb": "^2.2.30",
     "multer": "^1.3.0",
     "multer-s3": "^2.7.0",

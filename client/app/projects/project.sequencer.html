@@ -1,0 +1,332 @@
+<div class="contact-clean" style="padding:0; background: linear-gradient(to bottom, #9933ff 0%, #6666ff 100%);">
+    <div style="color:white;" class="animated fadeIn">
+        <div>
+            <nav class="navbar navbar-default navigation-clean">
+                <div class="container">
+                    <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Get Jamming!</a>
+                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active" role="presentation" ng-if='uploadCtrl.user'><a>Welcome back, {{uploadCtrl.user | uppercase}}!</a></li>
+                            <li role="presentation"><a ui-sref="userprojects">Projects </a></li>
+                            <li role="presentation"><a ui-sref="profile">Profile </a></li>
+                            <li class="dropdown" ng-if="uploadCtrl.user"><a href="/logout">Log Out</a>
+                                <!--<ul class="dropdown-menu" role="menu">-->
+                                <!--<li role="presentation"><a href="#">First Item</a></li>-->
+                                <!--<li role="presentation"><a href="#">Second Item</a></li>-->
+                                <!--<li role="presentation"><a href="#">Third Item</a></li>-->
+                                <!--</ul>-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <h1>Getting Started...</h1>
+        <br>
+        <h3>Play the Project</h3>
+        <p>Hit PLAY or 'right-arrow'</p>
+        <h3>Create a new note</h3>
+        <p>Click on an empty note position to insert a new note</p>
+        <h3>Select and/or edit a note</h3>
+        <p>Double click a note to select it. Double Click the same note to unselect a note. Selecting a new note by double click
+            action will also deselect the previous note</p>
+        <h3>Set a notes length</h3>
+        <p>Double click on a note to select it and then click an empty note slot further ahead in the time line to set the notes
+            length
+        </p>
+        <h3>Delete a note</h3>
+        <p>While a note is selected, press the 'delete' key or the 'left-arrow'</p>
+        <h3>Set the Pitch of a note</h3>
+        <p>While a note is selected use keyboard entry from 'Z' to '/' to set the pitch of the notes</p>
+    </div>
+    <!--<div id="text-carousel" class="carousel slide" data-ride="carousel">-->
+    <!-- Wrapper for slides -->
+    <!--<div class="row">
+            <div class="col-xs-offset-3 col-xs-6">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-content">
+                            <div>
+                                <h2>Playing the sequence</h2>
+                                <p>Hit PLAY or 'right-arrow', spacebar doesn't work in Firefox (scrolls the page)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                <h2>Creating a new note</h2>
+                                <p>Click on an empty note position to insert a new note.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                <h2>Selecting and editing a note</h2>
+                                <p>Double click a note to select it. Double Click the same note to unselect a note. Selecting
+                                    a new note by double click action will also deselect the previous note.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                <h2>Setting a notes length</h2>
+                                <p>Double click on a note to select it and then click an empty note slot further ahead in the
+                                    time line to set the notes length</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                <h2>Deleting a note</h2>
+                                <p>While a note is selected, press the 'delete' key or the 'left-arrow'. The delete key does
+                                    not work in Firefox (navigates to previous page)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-content">
+                            <div>
+                                <h2>Setting the Pitch of a note</h2>
+                                <p>While a note is selected use keyboard entry for z-/ to set the notes pitch in 100 cent (1
+                                    semitone) intervals</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>-->
+    <!-- Controls -->
+    <!--<a class="left carousel-control" href="#text-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+    <a class="right carousel-control" href="#text-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>-->
+    <!--<div class="container">-->
+    <!--<div class="row">-->
+    <!-- Carousel -->
+    <!--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+    <!-- Indicators -->
+    <!--<ol class="carousel-indicators">-->
+    <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+    <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+    <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+    <!--</ol>-->
+    <!-- Wrapper for slides -->
+    <!--<div class="carousel-inner">-->
+    <!--<div class="item active">-->
+    <!-- Static Header -->
+    <!--<div class="header-text hidden-xs">-->
+    <!--<div class="col-md-12 text-center">-->
+    <!--<h2>-->
+    <!--<span>Welcome to <strong>LOREM IPSUM</strong></span>-->
+    <!--</h2>-->
+    <!--<br>-->
+    <!--<h3>-->
+    <!--<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>-->
+    <!--</h3>-->
+    <!--<br>-->
+    <!--<div class="">-->
+    <!--<a class="btn btn-theme btn-sm btn-min-block" href="#"></a><a class="btn btn-theme btn-sm btn-min-block"-->
+    <!--href="#"></a></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!-- /header-text -->
+    <!--</div>-->
+    <!--<div class="item">-->
+    <!-- Static Header -->
+    <!--<div class="header-text hidden-xs">-->
+    <!--<div class="col-md-12 text-center">-->
+    <!--<h2>-->
+    <!--<span>Welcome to LOREM IPSUM</span>-->
+    <!--</h2>-->
+    <!--<br>-->
+    <!--<h3>-->
+    <!--<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>-->
+    <!--</h3>-->
+    <!--<br>-->
+    <!--<div class="">-->
+    <!--<a class="btn btn-theme btn-sm btn-min-block" href="#"></a><a class="btn btn-theme btn-sm btn-min-block"-->
+    <!--href="#"></a></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!-- /header-text -->
+    <!--</div>-->
+    <!--<div class="item">-->
+    <!-- Static Header -->
+    <!--<div class="header-text hidden-xs">-->
+    <!--<div class="col-md-12 text-center">-->
+    <!--<h2>-->
+    <!--<span>Welcome to LOREM IPSUM</span>
+                                </h2>
+                                <br>
+                                <h3>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                                </h3>
+                                <br>
+                                <div class="">
+                                    <a class="btn btn-theme btn-sm btn-min-block" href="#"></a><a class="btn btn-theme btn-sm btn-min-block"
+                                        href="#"></a></div>
+                            </div>
+                        </div>-->
+    <!-- /header-text -->
+    <!--</div>
+                </div>-->
+    <!-- Controls -->
+    <!--<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		    	<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+            </div>-->
+    <!-- /carousel -->
+    <!--</div>
+    </div>-->
+
+</div>
+<seq-project></seq-project>
+<br>
+<div>
+    <button ng-click="uploadCtrl.buttonHandler()" class="btn btn-danger">
+                <span ng-show="uploadCtrl.buttonPlayState">PLAY </span>
+                <span ng-show="uploadCtrl.buttonStopState">STOP and SAVE </span>
+        </button>
+    <button class="btn btn-info">
+            <a style="color:white;" id="audio">DOWNLOAD</a>
+            <!--<div id="recording-list"></div>-->
+        </button>
+</div>
+<br>
+<br>
+
+<div>
+    <form method="post" style="margin:auto;" name="UploadFormS3" novalidate ng-submit="uploadCtrl.uploadS3()">
+        <h2 class="text-center" style="color:white;">Upload your Project!</h2>
+        <div class="form-group has-success has-feedback">
+            <input class="form-control" type="text" name="name" placeholder="Name" ng-model="uploadCtrl.projectName">
+            <i class="form-control-feedback glyphicon glyphicon-ok" aria-hidden="true"></i>
+        </div>
+        <div class="form-group has-error"></div>
+        <div class="form-group">
+            <textarea class="form-control" rows="14" name="message" ng-model="uploadCtrl.commentS3" placeholder="Description"></textarea>
+        </div>
+        <img ngf-thumbnail="uploadCtrl.audFileS3" height="100"><br />
+        <div ng-show="uploadCtrl.audFileS3">
+            <span>{{uploadCtrl.audFileS3.size}} in bytes </span>
+        </div>
+
+        <div class="form-group">
+            <!-- Select file to upload. Single file only. Accepts only audio-->
+            <div style="color:white;">
+                <h3>Retrieve your saved recording of your project from your Downloads</h3>
+            </div>
+            <input id="file" type="file" ng-model="uploadCtrl.audFileS3" ngf-select ngf-pattern="'audio/*'" ngf-accept="'audio/*'">
+            <br><br>
+            <button type="submit" class="btn btn-success" ng-disabled="UploadFormS3.$invalid">Upload</button>
+        </div>
+        <!-- Success and error flash messages. Logic based on status code returned after POST request -->
+        <div class="alert" role="alert" alert-dismissable ng-show="uploadCtrl.statusS3.code" ng-class="{'alert-success': uploadCtrl.statusS3.code == 202, 'alert-danger': uploadCtrl.statusS3.code == 400 }">
+            <button class="close" data-dismiss="alert">
+                    <!-- data dismiss removes the element. This alert won't show up again before refreshing -->
+                    &times;
+                </button> {{ uploadCtrl.statusS3.message }}
+        </div>
+        <audio src="{{uploadCtrl.audioFromS3}}"></audio>
+        <img ng-src="{{uploadCtrl.audioFromS3}}">
+    </form>
+</div>
+</div>
+
+<!--<button onclick="startRecording(this);">record</button>
+    <button onclick="stopRecording(this);" disabled>stop</button>
+
+    <h2>Recordings</h2>
+    <ul id="recordingslist"></ul>
+
+    <h2>Log</h2>
+    <pre id="log"></pre>
+
+    <script>
+        function __log(e, data) {
+            log.innerHTML += "\n" + e + " " + (data || '');
+        }
+
+        var audio_context;
+        var recorder;
+
+        function startUserMedia(stream) {
+            var input = audio_context.createMediaStreamSource(stream);
+            __log('Media stream created.');
+
+            // Uncomment if you want the audio to feedback directly
+            //input.connect(audio_context.destination);
+            //__log('Input connected to audio context destination.');
+
+            recorder = new Recorder(input);
+            __log('Recorder initialised.');
+        }
+
+        function startRecording(button) {
+            recorder && recorder.record();
+            button.disabled = true;
+            button.nextElementSibling.disabled = false;
+            __log('Recording...');
+        }
+
+        function stopRecording(button) {
+            recorder && recorder.stop();
+            button.disabled = true;
+            button.previousElementSibling.disabled = false;
+            __log('Stopped recording.');
+
+            // create WAV download link using audio data blob
+            createDownloadLink();
+
+            recorder.clear();
+        }
+
+        function createDownloadLink() {
+            recorder && recorder.exportWAV(function (blob) {
+                var url = URL.createObjectURL(blob);
+                var li = document.createElement('li');
+                var au = document.createElement('audio');
+                var hf = document.createElement('a');
+
+                au.controls = true;
+                au.src = url;
+                hf.href = url;
+                hf.download = new Date().toISOString() + '.wav';
+                hf.innerHTML = hf.download;
+                li.appendChild(au);
+                li.appendChild(hf);
+                recordingslist.appendChild(li);
+            });
+        }
+
+        window.onload = function init() {
+            try {
+                // webkit shim
+                window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+                window.URL = window.URL || window.webkitURL;
+
+                audio_context = new AudioContext;
+                __log('Audio context set up.');
+                __log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not present!'));
+            } catch (e) {
+                alert('No web audio support in this browser!');
+            }
+
+            navigator.getUserMedia({ audio: true }, startUserMedia, function (e) {
+                __log('No live audio input: ' + e);
+            });
+        };
+    </script>-->

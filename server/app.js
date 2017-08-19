@@ -1,3 +1,5 @@
+var bcrypt = require('bcryptjs');
+
 // DEPENDENCIES ------------------------------------------------------------------------------------------------------
 // Loads express module and assigns it to a var called express
 var express = require("express");
@@ -7,6 +9,10 @@ var bodyParser = require('body-parser');
 // OTHER VARS ---------------------------------------------------------------------------------------------------------
 // Creates an instance of express called app
 var app = express();
+
+// GLOBAL SALT
+app.set('salt', bcrypt.genSaltSync(8) )
+// var hashPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 
 app.use(bodyParser.json());
 

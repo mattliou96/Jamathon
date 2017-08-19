@@ -1,0 +1,77 @@
+{
+  "ProjectName": "Test Project",
+  "ProjectAuthor": "User",
+  "ProjectCreated": "Sat Jul 07 2017 18:00:00 GMT+0800 (+08)",
+  "ProjectUpdated": "Sat Jul 08 2017 22:00:00 GMT+0800 (+08)",
+  "ProjectStatus": "Published",
+  "ProjectDescription": "A test project",
+  "ProjectLength": 4,
+  "ProjectDivision": 16,
+  "ProjectBPM": 120,
+  "SampleSet": {
+    "ClosedHH": "app/userprojects/assets/samples/trisamples-808trapstep/hh-closed1.mp3",
+    "OpenHH": "app/userprojects/assets/samples/trisamples-808trapstep/hh-open1.mp3",
+    "Snare": "app/userprojects/assets/samples/trisamples-808trapstep/snare1.mp3",
+    "Kick": "app/userprojects/assets/samples/trisamples-808trapstep/kick1.mp3",
+    "Bass": "app/userprojects/assets/samples/trisamples-808trapstep/bass1.mp3"
+  },
+  "Tracks": [
+    {
+      "TrackName": "Closed High Hat",
+      "TrackSample": "ClosedHH",
+      "Events": [
+        "1:1:0",
+        "3:1:0",
+        "5:1:0",
+        "7:1:0",
+        "9:1:0",
+        "11:1:0",
+        "13:1:0",
+        "15:1:0",
+        "17:1:0",
+        "25:1:0",
+        "27:1:0",
+        "29:1:0",
+        "31:1:0",
+        "33:1:0",
+        "35:1:0",
+        "37:1:0",
+        "39:1:0",
+        "41:1:0",
+        "43:1:0",
+        "45:1:0",
+        "47:1:0",
+        "49:1:0",
+        "51:1:0",
+        "53:1:0",
+        "55:1:0",
+        "57:1:0",
+        "59:1:0",
+        "61:1:0",
+        "63:1:0"
+      ]
+    },
+    {
+      "TrackName": "Open High Hat",
+      "TrackSample": "OpenHH",
+      "Events": []
+    },
+    {
+      "TrackName": "Snare",
+      "TrackSample": "Snare",
+      "Events": []
+    },
+    {
+      "TrackName": "Kick",
+      "TrackSample": "Kick",
+      "Events": []
+    },
+    {
+      "TrackName": "Bass",
+      "TrackSample": "Bass",
+      "Events": []
+    }
+  ]
+}
+
+

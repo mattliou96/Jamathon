@@ -1,0 +1,21 @@
+<!--<button ng-audio="sounds/test-project.wav" volume="0.5" start="0.2">Click me</button>
+<div>Current Time: {{ctrl.currentTime | trackTime}}</div>
+
+ <button ng-click='ctrl.paused ? ctrl.play() : ctrl.pause()'>Pause</button>
+ <button ng-click='ctrl.restart()'>Stop</button>
+ <button ng-click='ctrl.muting = !ctrl.muting'>Mute</button>
+
+ <label>Current Time</label>
+ <input class='form-control' type=text ng-model='ctrl.currentTime'>
+ <label>Volume</label>
+ <input class='form-control' type=range min=0 max=1 step=0.01 ng-model='ctrl.volume'>-->
+
+
+<seq-project></seq-project>
+
+<div>
+    <button ng-click="ctrl.buttonHandler()" class="btn btn-danger">
+                <span ng-show="ctrl.buttonPlayState">PLAY </span>
+                <span ng-show="ctrl.buttonStopState">STOP</span>
+        </button>
+</div>
