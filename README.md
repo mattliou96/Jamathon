@@ -13,7 +13,7 @@ Express
 AngularJS
 Node.js
 AWS S3 Console
-HELLO!
+HELLO world!
 
 # How to get it up and running
 
