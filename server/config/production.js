@@ -1,6 +1,6 @@
 'use strict';
 
-var domain_name = "https://jamathon-mattliou.herokuapp.com/";
+var domain_name = "https://jamathon-mattliou.herokuapp.com";
 
 module.exports = {
     PORT: 8080,
