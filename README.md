@@ -9,7 +9,7 @@ https://jamathon-mattliou.herokuapp.com
 
 # Stack
 * MongoDB
-⋅⋅*Express
+*Express
 ⋅⋅*AngularJS
 ⋅⋅*Node.js
 ⋅⋅*AWS S3 Console
