@@ -8,7 +8,7 @@ A social platform for you to create drum patterns using a sequencer and uploadin
 https://jamathon-mattliou.herokuapp.com
 
 # Stack
-⋅⋅* MongoDB
+* MongoDB
 ⋅⋅*Express
 ⋅⋅*AngularJS
 ⋅⋅*Node.js
