@@ -16,11 +16,11 @@ https://jamathon-mattliou.herokuapp.com
 
 
 # How to get it up and running
-* ```
+```
 bower install
 ```
 
-* ```
+```
 npm install
 ```
 * Requirements: mongoDB
