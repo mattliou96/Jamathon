@@ -23,3 +23,10 @@ Requirements: mongoDB
 Modify the url in database.js to connect to mongoDB
 Start server with node server/app.js
 Visit http://localhost:8080
+
+
+```javascript
+function test(){
+
+};
+```
