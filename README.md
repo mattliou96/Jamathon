@@ -10,20 +10,20 @@ https://jamathon-mattliou.herokuapp.com
 # Stack
 * MongoDB
 * Express
-⋅⋅*AngularJS
-⋅⋅*Node.js
-⋅⋅*AWS S3 Console
+* AngularJS
+* Node.js
+* AWS S3 Console
 
 
 # How to get it up and running
-⋅⋅*```
+* ```
 bower install
 ```
 
-⋅⋅*```
+* ```
 npm install
 ```
-⋅⋅*Requirements: mongoDB
-⋅⋅*Start server with ```node server/app.js```
+* Requirements: mongoDB
+* Start server with ```node server/app.js```
 
-⋅⋅*Visit ```http://localhost:3002 ```
+* Visit ```http://localhost:3002 ```
