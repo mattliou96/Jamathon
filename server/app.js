@@ -29,7 +29,7 @@ var config = require("./config");
 // CONSTANTS ---------------------------------------------------------------------------------------------------------
 // Defines server port.
 // Value of NODE_PORT is taken from the user environment if defined; port 3000 is used otherwise.
-const NODE_PORT = process.env.NODE_PORT;
+const NODE_PORT = process.env.PORT;
 
 // Defines paths
 // __dirname is a global that holds the directory name of the current module
